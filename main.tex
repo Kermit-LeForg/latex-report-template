@@ -1,0 +1,56 @@
+\documentclass[10pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyfoot{}{}{}
+\fancyhead{}{}{}
+
+\fancyhead[LO,RE]{\leftmark}
+\fancyhead[LE,RO]{\thepage}
+
+\geometry{
+  paper=a4paper,
+  margin=69pt,
+  includeheadfoot,
+  headheight=20px
+}
+
+\titleformat{\chapter}[display]
+  {\normalfont\Huge\bfseries}{}{0pt}{\Huge}
+
+\title{\Huge\bfseries{Your Title}}
+\author{Your name (+others??)}
+\date{the date of your report}
+
+
+\begin{document}
+
+\maketitle
+
+\chapter*{Introduction/Abstract}
+
+\large{
+  Your intro goes here.
+}
+
+\newpage
+
+\tableofcontents
+
+\normalsize
+
+% Chapter 1
+\include{chapters/1-chapter-one.tex}
+\newpage
+
+% Chapter 2
+\include{chapters/2-example-chapter.tex}
+\newpage
+
+% Follow the pattern above to add more chapters in
+
+\end{document}
