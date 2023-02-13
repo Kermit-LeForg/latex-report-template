@@ -4,23 +4,23 @@
 \usepackage{titlesec}
 \usepackage{geometry}
 \usepackage{fancyhdr}
+\usepackage{lipsum}
 
-\pagestyle{fancy}
-\fancyfoot{}{}{}
-\fancyhead{}{}{}
+%\pagestyle{fancy}
+%\fancyfoot{}{}{}
+%\fancyhead{}{}{}
 
-\fancyhead[LO,RE]{\leftmark}
-\fancyhead[LE,RO]{\thepage}
+%\fancyhead[LO,RE]{\leftmark}
+%\fancyhead[LE,RO]{\thepage}
 
 \geometry{
   paper=a4paper,
   margin=69pt,
   includeheadfoot,
-  headheight=20px
+  headheight=-25px
 }
 
-\titleformat{\chapter}[display]
-  {\normalfont\Huge\bfseries}{}{0pt}{\Huge}
+\titleformat{\chapter}[display] {\normalfont\Huge\bfseries}{}{0pt}{\Huge}
 
 \title{\Huge\bfseries{Your Title}}
 \author{Your name (+others??)}
@@ -34,7 +34,7 @@
 \chapter*{Introduction/Abstract}
 
 \large{
-  Your intro goes here.
+  \lipsum[1]
 }
 
 \newpage
@@ -44,11 +44,7 @@
 \normalsize
 
 % Chapter 1
-\include{chapters/1-chapter-one.tex}
-\newpage
-
-% Chapter 2
-\include{chapters/2-example-chapter.tex}
+\include{chapters/1-example-chapter.tex}
 \newpage
 
 % Follow the pattern above to add more chapters in
