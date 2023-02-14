@@ -8,13 +8,6 @@
 \usepackage{graphicx}
 \usepackage{float}
 
-%\pagestyle{fancy}
-%\fancyfoot{}{}{}
-%\fancyhead{}{}{}
-
-%\fancyhead[LO,RE]{\leftmark}
-%\fancyhead[LE,RO]{\thepage}
-
 \geometry{
   paper=a4paper,
   margin=69pt,
@@ -23,7 +16,6 @@
 }
 
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter{. }}{0pt}{\Huge\bfseries}
-
 
 \title{\Huge\bfseries{Your Title}}
 \author{Your name (+others??)}
@@ -64,6 +56,9 @@
 % Example appendix
 \include{suplimentary/appendix-a.tex}
 
+% Follow the pattern above to add more items into the appendix
+
+% bib management, make sure to ru biblatex on `main.aux`
 \bibliographystyle{ieeetr}
 \bibliography{ref.bib}
 
