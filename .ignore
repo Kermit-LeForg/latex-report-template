@@ -2,3 +2,7 @@
 *.log
 *.toc
 *.lof
+.ignore
+.gitignore
+.DS_Store
+assets/
