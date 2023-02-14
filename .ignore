@@ -6,3 +6,6 @@
 .gitignore
 .DS_Store
 assets/
+*.bbl
+*.bcf
+*.blg
