@@ -20,7 +20,8 @@
   headheight=-25px
 }
 
-\titleformat{\chapter}[display] {\normalfont\Huge\bfseries}{}{0pt}{\Huge}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter{. }}{0pt}{\Huge\bfseries}
+
 
 \title{\Huge\bfseries{Your Title}}
 \author{Your name (+others??)}
@@ -30,16 +31,23 @@
 \begin{document}
 
 \maketitle
+\tableofcontents
 
-\chapter*{Introduction/Abstract}
+
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
 
 \large{
-  \lipsum[1]
+  \lipsum[1-3]
 }
 
-\newpage
+% uncomment if you have any dedications
+% \chapter*{Dedication}
+% \addcontentsline{toc}{chapter}{Dedication}
 
-\tableofcontents
+% uncomment if you have acknowledgements
+% \chapter*{Acknowledgements}
+% \addcontentsline{toc}{chapter}{Acknowledgements}
 
 \normalsize
 
@@ -48,5 +56,11 @@
 \newpage
 
 % Follow the pattern above to add more chapters in
+
+\appendix
+
+% Example appendix
+\include{suplimentary/appendix-a.tex}
+
 
 \end{document}
