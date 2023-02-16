@@ -5,3 +5,5 @@
 *.bbl
 *.bcf
 *.blg
+_minted-main/
+main.run.xml

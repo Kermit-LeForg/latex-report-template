@@ -6,8 +6,8 @@
 \subsection{C-Sharp Code Block}
 
 \begin{figure}[ht]
-    \centering
-    \begin{lstlisting}[language=csh]
+    %\centering
+    \begin{minted}[xleftmargin=30pt,linenos]{csharp}
         public class Program
         {
             public static void Main(string[] args)
@@ -15,23 +15,33 @@
                 Console.WriteLine("Hello World!");
             }
         }
-    \end{lstlisting}
+    \end{minted}
     \caption{C-Sharp Code Block}
     \label{fig:CSharpCodeBlock}
 \end{figure}
 
 \subsection{Python Code Block}
 
+You can print to the python standard output using the \mintinline{python}|print| keyword. 
+
 \begin{figure}[ht]
     \centering
     \begin{lstlisting}[language=python]
-        print("Hello World!")
+        print("Hello World!, this is listings instead of minted")
     \end{lstlisting}
     \caption{Python Code Block}
     \label{fig:PythonCodeBlock}
 \end{figure}
 
 
+\begin{figure}[ht]
+    \centering
+    \begin{Verbatim}
+        print("this is as-is")
+    \end{Verbatim}
+    \caption{Mother Mother}
+    \label{fig:berbatim}
+\end{figure}
 
 \newpage
 

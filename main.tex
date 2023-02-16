@@ -1,4 +1,4 @@
-\documentclass[10pt]{report}
+\documentclass[12pt]{report}
 
 \usepackage[utf8]{inputenc}
 \usepackage{titlesec}
@@ -8,17 +8,30 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{listings}
+\usepackage{minted}
+\usepackage[style=authoryear]{biblatex}
 
+\addbibresource{ref.bib}
+
+\usemintedstyle{emacs}
+
+\setlength{\headheight}{15px}
+\setlength{\topmargin}{-5px}
 \geometry{
   paper=a4paper,
   margin=69pt,
-  headheight=0px
 }
 
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter{. }}{0pt}{\Huge\bfseries}
 
-\title{\Huge\bfseries{Report Title}}
-\author{Your name + Others}
+\title{
+  \Huge\bfseries{Report Title} \\
+  \Large\bfseries{CourseNo CourseName}
+}
+\author{
+  Your name \textit{(number)}  \\
+  + Others
+}
 \date{the date of your report}
 
 % Uncomment if you want to use the headers:
@@ -42,7 +55,7 @@
 \addcontentsline{toc}{chapter}{Introduction}
 
 \large{
-  This is a templatate made by LeForg \cite{leforg}
+  This is a templatate made by LeForg \emph{(\cite{leforg})}
 }
 
 % uncomment if you have any dedications
@@ -62,8 +75,7 @@
 % Follow the pattern above to add more chapters in
 
 % bib management, make sure to ru biblatex on `main.aux`
-\bibliographystyle{ieeetr}
-\bibliography{ref.bib}
+\printbibliography
 
 \appendix
 
