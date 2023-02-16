@@ -11,16 +11,25 @@
 \geometry{
   paper=a4paper,
   margin=69pt,
-  includeheadfoot,
-  headheight=-25px
+  headheight=0px
 }
 
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter{. }}{0pt}{\Huge\bfseries}
 
-\title{\Huge\bfseries{Your Title}}
-\author{Your name (+others??)}
+\title{\Huge\bfseries{Report Title}}
+\author{Your name + Others}
 \date{the date of your report}
 
+% Uncomment if you want to use the headers:
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{student number}
+\fancyhead[C]{Report Title}
+\fancyhead[R]{Course Number}
+
+% Comment this out if you want to add an underline to the headers:
+\renewcommand{\headrulewidth}{0pt}
 
 \begin{document}
 
@@ -51,15 +60,15 @@
 
 % Follow the pattern above to add more chapters in
 
+% bib management, make sure to ru biblatex on `main.aux`
+\bibliographystyle{ieeetr}
+\bibliography{ref.bib}
+
 \appendix
 
 % Example appendix
 \include{suplimentary/appendix-a.tex}
 
 % Follow the pattern above to add more items into the appendix
-
-% bib management, make sure to ru biblatex on `main.aux`
-\bibliographystyle{ieeetr}
-\bibliography{ref.bib}
 
 \end{document}
