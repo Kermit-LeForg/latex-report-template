@@ -11,16 +11,21 @@
 \geometry{
   paper=a4paper,
   margin=69pt,
-  includeheadfoot,
-  headheight=-25px
+  headheight=0px
 }
 
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter{. }}{0pt}{\Huge\bfseries}
 
-\title{\Huge\bfseries{Your Title}}
-\author{Your name (+others??)}
+\title{\Huge\bfseries{Report Title}}
+\author{Your name + Others}
 \date{the date of your report}
 
+\pagestyle{fancy}
+\fancyhead{}
+
+\fancyhead[L]{student number}
+\fancyhead[C]{Report Title}
+\fancyhead[R]{Course Number}
 
 \begin{document}
 
