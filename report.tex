@@ -10,6 +10,7 @@
 \usepackage{listings}
 \usepackage{minted}
 \usepackage[round,colon]{natbib}
+\usepackage{hyperref}
 
 \usemintedstyle{emacs}
 
@@ -34,30 +35,36 @@
 
 % Uncomment if you want to use the headers:
 
-\pagestyle{fancy}
-\fancyhead{}
-\fancyhead[L]{student number}
-\fancyhead[C]{Report Title}
-\fancyhead[R]{Course Number}
+% \pagestyle{fancy}
+% \fancyhead{}
+% \fancyhead[L]{student number}
+% \fancyhead[C]{Report Title}
+% \fancyhead[R]{Course Number}
 
 % Comment this out if you want to add an underline to the headers:
 \renewcommand{\headrulewidth}{0pt}
 
+% Customise List of Figures and Tables
+\renewcommand{\listfigurename}{List of Figures}
+\renewcommand{\listtablename}{Tables}
+
 \begin{document}
 
 \maketitle
+
+% ToC, Figs, Tabls. Comment any out if you dont need them
 \tableofcontents
 \listoffigures
+% \listoftables
 
 \include{suplimentary/intro.tex}
 
-% follow pattern above for dedications e.c.t.
 
 \normalsize
 
 % Chapter 1
 \include{chapters/1-example-chapter.tex}
-\newpage
+
 
 % Follow the pattern above to add more chapters in
 
