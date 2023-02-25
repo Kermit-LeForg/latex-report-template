@@ -1,0 +1,75 @@
+\documentclass[12pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage[round,colon]{natbib}
+
+\usemintedstyle{emacs}
+
+\setlength{\headheight}{15px}
+\setlength{\topmargin}{-5px}
+\geometry{
+  paper=a4paper,
+  margin=69pt,
+}
+
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter{. }}{0pt}{\Huge\bfseries}
+
+\title{
+  \Huge\bfseries{Report Title} \\
+  \Large\bfseries{CourseNo CourseName}
+}
+\author{
+  Your name \textit{(number)}  \\
+  + Others
+}
+\date{the date of your report}
+
+% Uncomment if you want to use the headers:
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{student number}
+\fancyhead[C]{Report Title}
+\fancyhead[R]{Course Number}
+
+% Comment this out if you want to add an underline to the headers:
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\listoffigures
+
+\include{suplimentary/intro.tex}
+
+% follow pattern above for dedications e.c.t.
+
+\normalsize
+
+% Chapter 1
+\include{chapters/1-example-chapter.tex}
+\newpage
+
+% Follow the pattern above to add more chapters in
+
+\appendix
+
+% Example appendix
+\include{suplimentary/appendix-a.tex}
+
+% Follow the pattern above to add more items into the appendix
+
+% bib management
+\bibliographystyle{hull}
+\bibliography{ref.bib}
+
+\end{document}
