@@ -7,3 +7,5 @@
 *.blg
 _minted-report/
 main.run.xml
+*.out
+*.lot
