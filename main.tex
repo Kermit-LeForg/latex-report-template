@@ -9,9 +9,7 @@
 \usepackage{float}
 \usepackage{listings}
 \usepackage{minted}
-\usepackage[style=authoryear]{biblatex}
-
-\addbibresource{ref.bib}
+\usepackage[round,colon]{natbib}
 
 \usemintedstyle{emacs}
 
@@ -63,14 +61,15 @@
 
 % Follow the pattern above to add more chapters in
 
-% bib management, make sure to ru biblatex on `main.aux`
-\printbibliography
-
 \appendix
 
 % Example appendix
 \include{suplimentary/appendix-a.tex}
 
 % Follow the pattern above to add more items into the appendix
+
+% bib management
+\bibliographystyle{hull}
+\bibliography{ref.bib}
 
 \end{document}
