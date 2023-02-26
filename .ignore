@@ -9,5 +9,7 @@ assets/
 *.bbl
 *.bcf
 *.blg
-_minted-main/
+_minted-report/
 main.run.xml
+*.out
+*.lot

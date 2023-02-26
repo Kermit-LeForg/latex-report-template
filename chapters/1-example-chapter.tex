@@ -27,7 +27,7 @@ You can print to the python standard output using the \mintinline{python}|print|
 \begin{figure}[ht]
     \centering
     \begin{lstlisting}[language=python]
-        print("Hello World!, this is listings instead of minted")
+:        print("Hello World!, this is listings instead of minted")
     \end{lstlisting}
     \caption{Python Code Block}
     \label{fig:PythonCodeBlock}
@@ -64,7 +64,7 @@ You can print to the python standard output using the \mintinline{python}|print|
         \frac{1}{2} 
     \end{math}
     \caption{Fraction}
-    \label{fig:Fraction 1}
+    \label{fig:Fraction-1}
 
 \end{figure}
 
@@ -72,6 +72,24 @@ You can print to the python standard output using the \mintinline{python}|print|
 
 \lipsum[7-8]
 
-\subsection{another subection}
+\subsection{another subection with a table in it}
 
-\lipsum[4-6]
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{||c c c c||} 
+ \hline
+ Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
+ \hline\hline
+ 1 & 6 & 87837 & 787 \\ 
+ 2 & 7 & 78 & 5415 \\
+ 3 & 545 & 778 & 7507 \\
+ 4 & 545 & 18744 & 7560 \\
+ 5 & 88 & 788 & 6344 \\ [1ex] 
+ \hline
+\end{tabular}
+\caption{Table to test captions and labels.}
+\label{table:1}
+\end{table}
+
+\newpage
