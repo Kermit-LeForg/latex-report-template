@@ -16,57 +16,24 @@
             }
         }
     \end{minted}
-    \caption{C-Sharp Code Block}
-    \label{fig:CSharpCodeBlock}
+    \macFC{CSharp Code Block}{cscb}
 \end{figure}
+
 
 \subsection{Python Code Block}
 
 You can print to the python standard output using the \mintinline{python}|print| keyword. 
-
-\begin{figure}[ht]
-    \centering
-    \begin{lstlisting}[language=python]
-:        print("Hello World!, this is listings instead of minted")
-    \end{lstlisting}
-    \caption{Python Code Block}
-    \label{fig:PythonCodeBlock}
-\end{figure}
-
-
-\begin{figure}[ht]
-    \centering
-    \begin{Verbatim}
-        print("this is as-is")
-    \end{Verbatim}
-    \caption{Mother Mother}
-    \label{fig:berbatim}
-\end{figure}
 
 \newpage
 
 
 \section{Maths}
 
-\begin{figure}[ht]
-    \centering
-    \begin{math}
-        E=mc^2 
-    \end{math}
-    \caption{Einstein Formula}
-    \label{fig:Emc2}
-
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    \begin{math}
-        \frac{1}{2} 
-    \end{math}
-    \caption{Fraction}
-    \label{fig:Fraction-1}
-
-\end{figure}
+\macMath{
+    E = mc^2
+} 
+{Einstein Formula}
+{emc2}
 
 \subsection{this is a subsection}
 
@@ -77,7 +44,7 @@ You can print to the python standard output using the \mintinline{python}|print|
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{||c c c c||} 
+\begin{tabular}{||c|c|c|c||} 
  \hline
  Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
  \hline\hline
@@ -88,8 +55,7 @@ You can print to the python standard output using the \mintinline{python}|print|
  5 & 88 & 788 & 6344 \\ [1ex] 
  \hline
 \end{tabular}
-\caption{Table to test captions and labels.}
-\label{table:1}
+\macFC{Table to test captions and labels.}{table:example}
 \end{table}
 
 \newpage
