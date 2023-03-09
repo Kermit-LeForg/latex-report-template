@@ -1,82 +1,32 @@
-\documentclass[12pt]{report}
 
-\usepackage{inputenc}
-\usepackage{titlesec}
-\usepackage{geometry}
-\usepackage{fancyhdr}
-\usepackage{lipsum}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{listings}
-\usepackage{minted}
-\usepackage[round,colon]{natbib}
-\usepackage{hyperref}
-
-\usemintedstyle{emacs}
-
-\setlength{\headheight}{15pt}
-\setlength{\topmargin}{-5pt}
-\geometry{
-  paper=a4paper,
-  margin=69pt,
+% Tweak these:
+\newcommand{\reportTitle}{Report Title}
+\newcommand{\reportFontSize}{12pt}
+\newcommand{\reportModNumber}{Module\_Number}
+\newcommand{\reportModName}{Module Name}
+\newcommand{\reportDate}{Date/Due/In}
+\newcommand{\reportAuthors} {
+  \authorNameNo{1st Author}{author no.}
+  \authorName{2nd Author}
+  \authorName{+ Others}
 }
 
-\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter{. }}{0pt}{\Huge\bfseries}
+\newcommand{\reportHeadingL}{heading Left}
+\newcommand{\reportHeadingC}{heading Middle}
+\newcommand{\reportHeadingR}{heading Right}
 
-\title{
-  \Huge\bfseries{Report Title} \\
-  \Large\bfseries{CourseNo CourseName}
-}
-\author{
-  Your name \textit{(number)}  \\
-  + Others
-}
-\date{the date of your report}
-
-% Uncomment if you want to use the headers:
-
-% \pagestyle{fancy}
-% \fancyhead{}
-% \fancyhead[L]{student number}
-% \fancyhead[C]{Report Title}
-% \fancyhead[R]{Course Number}
-
-% Comment this out if you want to add an underline to the headers:
-\renewcommand{\headrulewidth}{0pt}
-
-% Customise List of Figures and Tables
-\renewcommand{\listfigurename}{List of Figures}
-\renewcommand{\listtablename}{Tables}
+\input{config/config.tex} % Do Not Touch !!
 
 \begin{document}
 
-\maketitle
-
-% ToC, Figs, Tabls. Comment any out if you dont need them
+\buildtitle
 \tableofcontents
 \listoffigures
 % \listoftables
 
 \include{suplimentary/intro.tex}
-
-
-\normalsize
-
-% Chapter 1
 \include{chapters/1-example-chapter.tex}
-
-
-% Follow the pattern above to add more chapters in
-
 \appendix
-
-% Example appendix
 \include{suplimentary/appendix-a.tex}
-
-% Follow the pattern above to add more items into the appendix
-
-% bib management
-\bibliographystyle{hull}
-\bibliography{ref.bib}
-
+\bib
 \end{document}
