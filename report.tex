@@ -1,4 +1,3 @@
-
 % Tweak these:
 \newcommand{\reportTitle}{Report Title}
 \newcommand{\reportFontSize}{12pt}
@@ -17,13 +16,15 @@
 \newcommand{\reportHeadingR}{heading Right}
 
 \input{config/config.tex} % Do Not Touch !!
+\input{acronyms.tex}
 
 \begin{document}
 
 \buildtitle
 \tableofcontents
 \listoffigures
-% \listoftables
+\listoftables
+\printacronyms[name=List of Acronyms]
 
 \include{suplimentary/intro.tex}
 \include{chapters/1-example-chapter.tex}
