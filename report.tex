@@ -20,15 +20,22 @@
 
 \begin{document}
 
-\buildtitle
+\buildtitle{}
 \tableofcontents
+
 \listoffigures
+\addcontentsline{toc}{chapter}{\listfigurename}
+
 \listoftables
-\printacronyms[name=List of Acronyms]
+\addcontentsline{toc}{chapter}{\listtablename}
+
+\printacronyms[name={\acrotranslate}]
+\addcontentsline{toc}{chapter}{\acrotranslate}
 
 \include{suplimentary/intro.tex}
 \include{chapters/1-example-chapter.tex}
 \appendix
 \include{suplimentary/appendix-a.tex}
-\bib
+\bib{}
+\addcontentsline{toc}{chapter}{Bibliography}
 \end{document}
