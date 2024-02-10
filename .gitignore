@@ -9,3 +9,4 @@ _minted-report/
 main.run.xml
 *.out
 *.lot
+*.synctex.gz
