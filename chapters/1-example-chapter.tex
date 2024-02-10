@@ -1,31 +1,29 @@
+% !TeX root = ..\report.tex
 \chapter{Chapter 1 name...}
-
 
 \section{Code Blocks}
 
-\subsection{C-Sharp Code Block}
+\subsection{Code Block}
 
-\begin{figure}[ht]
-    %\centering
+\begin{figure}[H]
     \begin{minted}[xleftmargin=30pt,linenos]{csharp}
-        public class Program
-        {
-            public static void Main(string[] args)
-            {
-                Console.WriteLine("Hello World!");
-            }
-        }
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Hello World!");
+    }
+}
     \end{minted}
     \macFC{CSharp Code Block}{cscb}
 \end{figure}
 
 
-\subsection{Python Code Block}
+\subsection{In-Line Code}
 
 You can print to the python standard output using the \mintinline{python}|print| keyword. 
 
 \newpage
-
 
 \section{Maths}
 
@@ -39,7 +37,7 @@ You can print to the python standard output using the \mintinline{python}|print|
 
 \lipsum[7-8]
 
-\subsection{another subection with a table in it}
+\subsection{another subsection with a table in it}
 
 
 \begin{table}[h!]
@@ -58,14 +56,19 @@ You can print to the python standard output using the \mintinline{python}|print|
 \macFC{Table to test captions and labels.}{table:example}
 \end{table}
 
+\newpage 
+
 \section{Acronyms}
 
-When first using acronyms, it will display the full phrase and the acronym in brackets. After that, it will only display the acronym.\\
+When first using acronyms, it will display the full phrase and the acronym in brackets.
+After that, it will only display the acronym.
+\par 
 
-\begin{figure}[ht]
+
+\begin{figure}[H]
     \begin{minted}[xleftmargin=30pt,linenos]{tex}
-        \ac{ex} \\ 
-        \ac{ex}
+\ac{ex} \\ 
+\ac{ex}
     \end{minted}
     \macFC{TeX Code Block}{tex}
 \end{figure}
