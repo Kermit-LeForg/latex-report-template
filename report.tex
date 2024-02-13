@@ -1,3 +1,4 @@
+% !TeX root = report.tex
 % Tweak these:
 \newcommand{\reportTitle}{Report Title}
 \newcommand{\reportFontSize}{12pt}
@@ -16,12 +17,12 @@
 \newcommand{\reportHeadingR}{heading Right}
 
 \input{config/config.tex} % Do Not Touch !!
-\input{acronyms.tex}
+\input{suplimentary/acronyms.tex}
 
 \begin{document}
 
 \buildtitle{}
-\tableofcontents
+\tableofcontents{}
 
 \listoffigures
 \addcontentsline{toc}{chapter}{\listfigurename}
@@ -34,7 +35,7 @@
 
 \include{suplimentary/intro.tex}
 \include{chapters/1-example-chapter.tex}
-\appendix
+\appendix{}
 \include{suplimentary/appendix-a.tex}
 \bib{}
 \addcontentsline{toc}{chapter}{Bibliography}
