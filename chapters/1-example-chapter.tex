@@ -1,71 +1,83 @@
-\chapter{Chapter 1 name...}
+% !TeX root = ..\report.tex
+\chapter{Chapter 1 Name}
 
+\section{Code}
 
-\section{Code Blocks}
+\subsection{Code Block}
 
-\subsection{C-Sharp Code Block}
-
-\begin{figure}[ht]
-    %\centering
+\begin{figure}[H]
     \begin{minted}[xleftmargin=30pt,linenos]{csharp}
-        public class Program
-        {
-            public static void Main(string[] args)
-            {
-                Console.WriteLine("Hello World!");
-            }
-        }
+namespace Project;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Hello World!");
+    }
+}
     \end{minted}
-    \macFC{CSharp Code Block}{cscb}
+    \macFC{C\# Code Block}{code:code_block}
 \end{figure}
 
+All labels used for code blocks should begin with `code:'
 
-\subsection{Python Code Block}
+\subsection{In-Line Code}
 
 You can print to the python standard output using the \mintinline{python}|print| keyword. 
 
 \newpage
+\section{Figures}
 
+Using \mintinline{tex}|\macLFC| will allow you to have a different caption below the image than is used in the list of figures.
+This can be used when the caption requires a reference but you don't want the reference in the list of figures.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{assets/example-asset.jpg}
+    \macLFC{Caption for ToC}{Caption Below}{fig:figure1}
+\end{figure}
+
+\section{Tables}
+    
+\begin{table}[H]
+    \centering
+    \begin{tabular}{||c|c|c|c||} 
+     \hline
+     Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
+     \hline\hline
+     1 & 6 & 87837 & 787 \\ 
+     2 & 7 & 78 & 5415 \\
+     3 & 545 & 778 & 7507 \\
+     4 & 545 & 18744 & 7560 \\
+     5 & 88 & 788 & 6344 \\ [1ex] 
+     \hline
+    \end{tabular}
+    \macFC{Table to test captions and labels.}{table:example}
+\end{table}
+
+\newpage
 \section{Maths}
+
+Using the macro \mintinline{tex}|\macMath| you can write a maths block and include a caption and label, prefixed with `math:'
 
 \macMath{
     E = mc^2
-} 
+}
 {Einstein Formula}
-{emc2}
-
-\subsection{this is a subsection}
-
-\lipsum[7-8]
-
-\subsection{another subection with a table in it}
-
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{||c|c|c|c||} 
- \hline
- Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
- \hline\hline
- 1 & 6 & 87837 & 787 \\ 
- 2 & 7 & 78 & 5415 \\
- 3 & 545 & 778 & 7507 \\
- 4 & 545 & 18744 & 7560 \\
- 5 & 88 & 788 & 6344 \\ [1ex] 
- \hline
-\end{tabular}
-\macFC{Table to test captions and labels.}{table:example}
-\end{table}
+{math:emc2}
 
 \section{Acronyms}
 
-When first using acronyms, it will display the full phrase and the acronym in brackets. After that, it will only display the acronym.\\
+When first using acronyms, it will display the full phrase and the acronym in brackets.
+After that, it will only display the acronym.
+\par 
 
-\begin{figure}[ht]
+
+\begin{figure}[H]
     \begin{minted}[xleftmargin=30pt,linenos]{tex}
-        \ac{ex} \\ 
-        \ac{ex}
+\ac{ex} \\ 
+\ac{ex}
     \end{minted}
     \macFC{TeX Code Block}{tex}
 \end{figure}
@@ -73,3 +85,10 @@ When first using acronyms, it will display the full phrase and the acronym in br
 \noindent
 \ac{ex} \\
 \ac{ex}
+
+\section{Referencing}
+
+To reference use the macro \mintinline{tex}|\citep{}|.
+Insert the unique keyword given in the \emph{ref.bib} file.
+When referencing a company or group, encase the author value in two sets of curly braces.
+Finally, ensure the formatting is correct using \mintinline{tex}|\url| and \mintinline{tex}|\emph{}|
