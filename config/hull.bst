@@ -1000,7 +1000,7 @@ FUNCTION {book}
   if$
   format.date "year" output.check
   date.block
-  format.btitle "title" output.check
+  format.title "title" output.check
   crossref missing$
     { format.bvolume output
   new.sentence
