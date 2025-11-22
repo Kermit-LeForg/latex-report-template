@@ -24,7 +24,7 @@ All labels used for code blocks should begin with `code:'
 
 \subsection{In-Line Code}
 
-You can print to the python standard output using the \mintinline{python}|print| keyword. 
+You can print to the python standard output using the \mintinline{python}|print| keyword.
 
 \newpage
 \section{Figures}
@@ -39,19 +39,19 @@ This can be used when the caption requires a reference but you don't want the re
 \end{figure}
 
 \section{Tables}
-    
+
 \begin{table}[H]
     \centering
-    \begin{tabular}{||c|c|c|c||} 
-     \hline
-     Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
-     \hline\hline
-     1 & 6 & 87837 & 787 \\ 
-     2 & 7 & 78 & 5415 \\
-     3 & 545 & 778 & 7507 \\
-     4 & 545 & 18744 & 7560 \\
-     5 & 88 & 788 & 6344 \\ [1ex] 
-     \hline
+    \begin{tabular}{||c|c|c|c||}
+        \hline
+        Col1 & Col2 & Col2  & Col3 \\ [0.5ex]
+        \hline\hline
+        1    & 6    & 87837 & 787  \\
+        2    & 7    & 78    & 5415 \\
+        3    & 545  & 778   & 7507 \\
+        4    & 545  & 18744 & 7560 \\
+        5    & 88   & 788   & 6344 \\ [1ex]
+        \hline
     \end{tabular}
     \macFC{Table to test captions and labels.}{table:example}
 \end{table}
@@ -71,7 +71,7 @@ Using the macro \mintinline{tex}|\macMath| you can write a maths block and inclu
 
 When first using acronyms, it will display the full phrase and the acronym in brackets.
 After that, it will only display the acronym.
-\par 
+\par
 
 
 \begin{figure}[H]
@@ -92,3 +92,7 @@ To reference use the macro \mintinline{tex}|\citep{}|.
 Insert the unique keyword given in the \emph{ref.bib} file.
 When referencing a company or group, encase the author value in two sets of curly braces.
 Finally, ensure the formatting is correct using \mintinline{tex}|\url| and \mintinline{tex}|\emph{}|
+
+\subsection{Acts of Parliment}
+
+To reference an act of parliment use the following code: \mintinline{tex}|\citep{}| like normal. Example: \citep{actofparliament}

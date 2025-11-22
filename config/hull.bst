@@ -74,6 +74,7 @@ ENTRY
     title
     type
     url
+	doi
     volume
     year
   }
@@ -940,16 +941,18 @@ FUNCTION {format.org.or.pub}
   address empty$ t empty$ and
     'skip$
     {
-      address "address" bibinfo.check *
-      t empty$
-        'skip$
-        { address empty$
-            'skip$
-            { ": " * }
-          if$
-          t *
-        }
-      if$
+	  t *
+	  % Hull Harvard 2025+ does not require the publisher's address --@sbrl 2025-03-11
+      % address "address" bibinfo.check *
+      % t empty$
+      %   'skip$
+      %   { address empty$
+      %       'skip$
+      %       { ": " * }
+      %     if$
+      %     t *
+      %   }
+      % if$
     }
   if$
 }
@@ -959,6 +962,20 @@ FUNCTION {format.publisher.address}
 
 FUNCTION {format.organization.address}
 { organization "organization" bibinfo.check format.org.or.pub
+}
+
+FUNCTION {format.doi}
+{
+	't :=
+	""
+	t empty$
+	'skip$
+	{
+		"\url{https://doi.org/" *
+		t *
+		"}" *
+	}
+  if$
 }
 
 FUNCTION {article}
@@ -981,6 +998,13 @@ FUNCTION {article}
       format.pages output
     }
   if$
+  doi empty$ doi missing$ or
+  'skip$
+  {
+	new.sentence
+  	doi "doi" bibinfo.check format.doi output
+  }
+  if$
   format.note output
   fin.entry
 }
@@ -1000,7 +1024,7 @@ FUNCTION {book}
   if$
   format.date "year" output.check
   date.block
-  format.title "title" output.check
+  format.btitle "title" output.check
   crossref missing$
     { format.bvolume output
   new.sentence
@@ -1143,6 +1167,13 @@ FUNCTION {mastersthesis}
   bbl.mthesis format.thesis.type output.nonnull
   school "school" bibinfo.warn output
   address "address" bibinfo.check output
+  howpublished empty$ howpublished missing$ or
+  'skip$
+  {
+	new.sentence
+	howpublished "howpublished" bibinfo.check output
+  }
+  if$
   format.note output
   fin.entry
 }
@@ -1159,6 +1190,13 @@ FUNCTION {dissertation}
   bbl.dissertation format.thesis.type output.nonnull
   school "school" bibinfo.warn output
   address "address" bibinfo.check output
+  howpublished empty$ howpublished missing$ or
+  'skip$
+  {
+	new.sentence
+	howpublished "howpublished" bibinfo.check output
+  }
+  if$
   format.note output
   fin.entry
 }
@@ -1557,4 +1595,3 @@ EXECUTE {end.bib}
 %% End of customized bst file
 %%
 %% End of file `hull.bst'.
-
